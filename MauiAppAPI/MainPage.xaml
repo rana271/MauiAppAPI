@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppAPI.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Add" Clicked="Button_Clicked" />
+            <Button Text="Update" Clicked="Button_Clicked_1" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Delete" Clicked="Button_Clicked_2" />
+        </StackLayout>
+        <ListView x:Name="postListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" Detail="{Binding Body}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
